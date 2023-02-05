@@ -13,15 +13,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/dark.min.css">
     </head>
     <body>
-        <!-- <div class="conteiner-fluid bg-purple px-3">
-            <div class="row">
-                <nav class="nav text-light">
-                    <a class="nav-link active" aria-current="page" href="#">صفحه اصلی</a>
-                    <a class="nav-link" href="#">ارتباط با ما</a>
-                    <a class="nav-link" href="#">دانلود مستندات</a>
-                </nav>
-            </div>
-    </div> -->
         <nav class="navbar navbar-expand-md bg-purple">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">وبسرویس ارسال پیامک</a>
@@ -179,15 +170,6 @@
                   مقدار اعتبار و لیست خطوط ارسال کننده فعال در
                   پنل
                                     </label>
-                                    <!-- <li class="menu-item"><a class="text-reset text-decoration-none"  href="#Send">ارسال یک متن به یک یا چند شماره با متد Get  </a></li>
-                          <li  class="menu-item"><a class="text-reset text-decoration-none" href="#SendBulk">ارسال یک متن به یک یا چند شماره با متد post  </a></li>
-                          <li  class="menu-item"><a class="text-reset text-decoration-none" href="#SendMultiple">ارسال چند متن به چند گیرنده</a></li> </li>
-                          <li  class="menu-item"><a class="text-reset text-decoration-none" href="#SendTokenSingle">ارسال به یک شماره با استفاده از الگوی تعریف شده   </a></li>
-                          <li  class="menu-item"><a class="text-reset text-decoration-none" href="#SendTokenMulti">ارسال یک الگو با متن های مختلف به چند شماره </a></li>
-                          <li  class="menu-item"><a class="text-reset text-decoration-none" href="#TokenList">دریافت لیست الگوهای تعریف شده در پنل</a></li>
-                          <li  class="menu-item"><a class="text-reset text-decoration-none" href="#StatusById">دریافت وضعیت پیام های ارسالی با شناسه پیامک</a></li>
-                          <li  class="menu-item"><a class="text-reset text-decoration-none" href="#StatusByTraceId">دریافت وضعیت پیام های ارسالی با شناسه پنل</a></li>
-                          <li  class="menu-item"><a class="text-reset text-decoration-none" href="#AccountInfo">دریافت مقدار اعتبار و لیست خطوط ارسال کننده فعال در پنل</a></li> -->
                                 </ul>
                             </nav>
                         </div>
@@ -513,7 +495,7 @@ echo $response;
                                                 </code>
                                             </pre>
                                             <pre id="1_csharp" class=" 1_code deactive">
-                                                <button class="btn btn-light btn-sm copy-button" onclick="coyCodeToClipboard(this)">COPY</button>
+                                                <button class="btn btn-light btn-sm copy-button" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <code class="language-csharp line-numbers">
 var client = new RestClient("http://api.sms-webservice.com/api/V3/Send?ApiKey=123456&Text=test&Sender=123654&Recipients=9121112222");
 client.Timeout = -1;
@@ -523,7 +505,7 @@ Console.WriteLine(response.Content);
                                                 </code>
                                             </pre>
                                             <pre id="1_java" class=" 1_code deactive">
-                                                <button class="btn btn-light btn-sm copy-button" onclick="coyCodeToClipboard(this)">COPY</button>
+                                                <button class="btn btn-light btn-sm copy-button" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <code class="language-java line-numbers">
 OkHttpClient client = new OkHttpClient().newBuilder()
 .build();
@@ -537,7 +519,7 @@ Response response = client.newCall(request).execute();
                                                 </code>
                                             </pre>
                                             <pre id="1_js" class=" 1_code deactive">
-                                                <button class="btn btn-light btn-sm copy-button" onclick="coyCodeToClipboard(this)">COPY</button>
+                                                <button class="btn btn-light btn-sm copy-button" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <code class="language-js line-numbers">
 var axios = require('axios');
 
