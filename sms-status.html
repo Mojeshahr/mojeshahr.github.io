@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Documentation</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css">
+        <link rel="stylesheet" href="./assets/css/font.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <!-- <link rel="stylesheet" href="./assets/css/prism.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <!-- <link rel="stylesheet" href="./assets/css/highlight.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/dark.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md bg-purple">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">وبسرویس ارسال پیامک</a>
+                <button
+                    class="navbar-toggler collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="http://api.sms-webservice.com/swagger/ui/index#/">لینک Swagger</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://api.sms-webservice.com/api/V3/ ">لینک وبسرویس </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tel:02174912">پشتیبانی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="code-list.html">لیست خطاها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sms-status.html">وضعیت  پیامک ها</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- //ردیف محتوا -->
+                <div class="col-12">
+                    <div class="container-fluid p-0" id="content-an-code">
+                        <!-- متد اول -->
+                        <div class="row " id="Send">
+                            <div class="pb-5 col-second p-3 bg-light">
+                                <div class="container">
+                                    <div class="row pt-3">
+                                        <h3>لیست وضعیت های پیامک ارسالی</h3>
+                                        <p>
+                                            برنامه نویسانی که از متهای وب سرویس پیامکی جهت ارسال پیامک استفاده می کنند، می توانند با استفاده از لیست خطاهای دریافتی از وب سرویس که در زیر قرار داده ایم، خطای دریافتی خود را شناسایی و راه حل مناسبی را برای رفع خطا دریابند.
+                                        </p>
+                                        <table class="table table-hover table-dark">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">کد وضعیت</th>
+                                                <th scope="col">وضعیت پیامک</th>
+                                                <th scope="col">توضیحات</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <th scope="row">0</th>
+                                                <td>در صف سامانه</td>
+                                                <td>پیامک در صف ارسال سامانه است و هنوز از سامانه خارج نشده است.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">1</th>
+                                                <td>ارسال شده، بدون وضعیت</td>
+                                                <td>پیامک از سامانه خارج شده و تحویل اپراتورشده، اما هنوز وضعیتی از اپراتور دریافت نشده است.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">2</th>
+                                                <td>ارسال شده، در صف</td>
+                                                <td>پیامک تحویل اپراتور داده شده، و در صف ارسال اپراتور ارسال کننده می باشد.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">3</th>
+                                                <td>درانتظار تحویل گوشی</td>
+                                                <td>پیامک از اپراتور خارج شده، اما هنوز تاییده دریافت از گوشی دریافت نشده(ممکن است گوشی در دسترس نباشد).</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">4</th>
+                                                <td>تحویل به گوشی</td>
+                                                <td>پیامک به گوشی تحویل داده شده است.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">5</th>
+                                                <td>نرسیده به گوشی</td>
+                                                <td>پیامک از اپراتور ارسال شده است اما به دلایل مختلفی مانند خاموش بودن گوشی یا اختلالات مختلف پیامک توسط گوشی دریافت نشده است.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">6</th>
+                                                <td>خطا در ارسال</td>
+                                                <td>خطایی در روند ارسال رخ داده است.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">7</th>
+                                                <td>گیرنده مسدود</td>
+                                                <td>گیرنده دریافت پیامک از خطوط تبلیغاتی را بر روی خط بسته است.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">8</th>
+                                                <td>شناسه پیدا نشد</td>
+                                                <td>پیامی با شناسه ارسالی ثبت نشده است.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">9</th>
+                                                <td>منقضی</td>
+                                                <td>مدت زمان معتبر برای ارسال پیامک به دلایلی چون در دسترس نبودن اپراتور و ... به اتمام رسیده و پیامک از سامانه ارسال نشده است. </td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">10</th>
+                                                <td>نامشخص</td>
+                                                <td>نامشخص</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">11</th>
+                                                <td>دریافت کننده نامعتبر</td>
+                                                <td>فرمت شماره ورودی اشتباه است.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">12</th>
+                                                <td>گیرنده در لیست سیاه اکانت شماست</td>
+                                                <td>شماره گیرنده قبلا در لیست سیاه پنل شما ثبت شده است.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">13</th>
+                                                <td>گیرنده نامعتبر</td>
+                                                <td>شماره وارد شده برای اپراتور ارسال کننده نامعتبر است(برای مثال : امکان ارسال پیامک متنی برای گیرنده شماره تلفن ثابت وجود ندارد).</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">14</th>
+                                                <td>متن بلاک</td>
+                                                <td>امکان ارسال متن وارد شده نمی باشد.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">15</th>
+                                                <td>لغو دریافت توسط گیرنده</td>
+                                                <td>گیرنده قبلا با ارسال کلید لغو، دریافت پیامک از سرشماره مورد استفاده شما را لغو نموده است.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">16</th>
+                                                <td>بلاک شده</td>
+                                                <td>پیامک بلاک شده و امکان ارسال آن نمی باشد.</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">17</th>
+                                                <td>محدودیت روزانه</td>
+                                                <td>سقف تعداد ارسال پیامک api  پنل شما به اتمام رسیده است.</td>
+                                              </tr>
+
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="./assets/js/bootstrap.min.js"></script> -->
+        <script src="./assets/js/bootstrap.esm.min.js"></script>
+        <script src="./assets/js/custom.js"></script>
+        <!-- <script src="./assets/js/prism.js"></script> -->
+        <script src="./assets/js/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>

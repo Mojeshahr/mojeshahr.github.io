@@ -15,7 +15,7 @@
     <body>
         <nav class="navbar navbar-expand-md bg-purple">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">وبسرویس ارسال پیامک</a>
+                <a class="navbar-brand" href="./index.html">وبسرویس ارسال پیامک</a>
                 <button
                     class="navbar-toggler collapsed"
                     type="button"
@@ -37,6 +37,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="tel:02174912">پشتیبانی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="code-list.html">لیست خطاها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sms-status.html">وضعیت  پیامک ها</a>
                         </li>
                     </ul>
                 </div>
@@ -279,6 +285,7 @@
                 مقدار اعتبار و لیست خطوط ارسال کننده فعال در
                 پنل
                                 </label>
+                                
                             </ul>
                         </nav>
                     </div>
@@ -305,7 +312,7 @@
                                             <div class="row text-end method-box p-2 py-3">
                                                 <button class="btn btn-dark btn-sm copy-button in-link" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <p class="webservice-link pb-sm-0 pb-5 get-method m-0">
-                                                    http://api.sms-webservice.com/api/V3/Send
+                                                    https://api.sms-webservice.com/api/V3/Send
                                                 </p>
                                             </div>
                                             <br>
@@ -416,7 +423,7 @@
                           align-items-center ">
                                                     <p class="response-text">200
                                                         <span class="type-param">
-                                                            OBJRCT
+                                                            OBJECT
                                                         </span>
                                                     </p>
                                                 </div>
@@ -569,7 +576,7 @@ console.log(error);
                                             <div class="row text-end method-box p-2 py-3">
                                                 <button class="btn btn-dark btn-sm copy-button in-link" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <p class="webservice-link pb-sm-0 pb-5 post-method m-0">
-                                                    http://api.sms-webservice.com/api/V3/SendBulk
+                                                    https://api.sms-webservice.com/api/V3/SendBulk
                                                 </p>
                                             </div>
                                             <br>
@@ -680,7 +687,7 @@ console.log(error);
                           align-items-center ">
                                                     <p class="response-text">200
                                                         <span class="type-param">
-                                                            OBJRCT
+                                                            OBJECT
                                                         </span>
                                                     </p>
                                                 </div>
@@ -852,7 +859,7 @@ console.log(error);
                                             <div class="row text-end method-box p-2 py-3">
                                                 <button class="btn btn-dark btn-sm copy-button in-link" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <p class="webservice-link pb-sm-0 pb-5 post-method m-0">
-                                                    http://api.sms-webservice.com/api/V3/SendMultiple
+                                                    https://api.sms-webservice.com/api/V3/SendMultiple
                                                 </p>
                                             </div>
                                             <br>
@@ -873,7 +880,7 @@ console.log(error);
                           align-items-center ">
                                                     <p class="response-text">200
                                                         <span class="type-param">
-                                                            OBJRCT
+                                                            OBJECT
                                                         </span>
                                                     </p>
                                                 </div>
@@ -1053,7 +1060,7 @@ console.log(error);
                                             <div class="row text-end method-box p-2 py-3">
                                                 <button class="btn btn-dark btn-sm copy-button in-link" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <p class="webservice-link pb-sm-0 pb-5 get-method m-0">
-                                                    http://api.sms-webservice.com/api/V3/SendTokenSingle
+                                                    https://api.sms-webservice.com/api/V3/SendTokenSingle
                                                 </p>
                                             </div>
                                             <br>
@@ -1200,7 +1207,7 @@ console.log(error);
                           align-items-center ">
                                                     <p class="response-text">200
                                                         <span class="type-param">
-                                                            OBJRCT
+                                                            OBJECT
                                                         </span>
                                                     </p>
                                                 </div>
@@ -1411,11 +1418,26 @@ console.log(error);
                                             <div class="row text-end method-box p-2 py-3">
                                                 <button class="btn btn-dark btn-sm copy-button in-link" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <p class="webservice-link pb-sm-0 pb-5 post-method m-0">
-                                                    http://api.sms-webservice.com/api/V3/SendTokenMulti
+                                                    https://api.sms-webservice.com/api/V3/SendTokenMulti
                                                 </p>
                                             </div>
                                             <br>
                                             <h3>پارامتر های ورودی</h3>
+                                            
+                                                <pre>
+                                                    <code class="language-json line-numbers">{
+    "ApiKey": "string",
+    "TemplateKey": "string",
+    "Recipients": [
+        {
+        "Destination": 0,
+        "UserTraceId": 0,
+        "Parameters": [
+            "string"
+        ]
+        }  ]}
+                                                    </code>
+                                                </pre>
                                             <p>
                                                 همانطور که در تصویر بالا مشخص است، در بدنه درخواست
                       دریافت کننده پیامک لیستی است که شامل شماره
@@ -1433,7 +1455,7 @@ console.log(error);
                           align-items-center ">
                                                     <p class="response-text">200
                                                         <span class="type-param">
-                                                            OBJRCT
+                                                            OBJECT
                                                         </span>
                                                     </p>
                                                 </div>
@@ -1642,7 +1664,7 @@ console.log(error);
                                             <div class="row text-end method-box p-2 py-3">
                                                 <button class="btn btn-dark btn-sm copy-button in-link" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <p class="webservice-link pb-sm-0 pb-5 post-method m-0">
-                                                    http://api.sms-webservice.com/api/V3/TokenList
+                                                    https://api.sms-webservice.com/api/V3/TokenList
                                                 </p>
                                             </div>
                                             <br>
@@ -1685,7 +1707,7 @@ console.log(error);
                           align-items-center ">
                                                     <p class="response-text">200
                                                         <span class="type-param">
-                                                            OBJRCT
+                                                            OBJECT
                                                         </span>
                                                     </p>
                                                 </div>
@@ -1843,7 +1865,7 @@ console.log(error);
                                             <div class="row text-end method-box p-2 py-3">
                                                 <button class="btn btn-dark btn-sm copy-button in-link" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <p class="webservice-link pb-sm-0 pb-5 post-method m-0">
-                                                    http://api.sms-webservice.com/api/V3/StatusById
+                                                    https://api.sms-webservice.com/api/V3/StatusById
                                                 </p>
                                             </div>
                                             <br>
@@ -1911,7 +1933,7 @@ console.log(error);
                           align-items-center ">
                                                     <p class="response-text">200
                                                         <span class="type-param">
-                                                            OBJRCT
+                                                            OBJECT
                                                         </span>
                                                     </p>
                                                 </div>
@@ -2112,7 +2134,7 @@ console.log(error);
                                             <div class="row text-end method-box p-2 py-3">
                                                 <button class="btn btn-dark btn-sm copy-button in-link" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <p class="webservice-link pb-sm-0 pb-5 post-method m-0">
-                                                    http://api.sms-webservice.com/api/V3/StatusByUserTraceId
+                                                    https://api.sms-webservice.com/api/V3/StatusByUserTraceId
                                                 </p>
                                             </div>
                                             <br>
@@ -2180,7 +2202,7 @@ console.log(error);
                           align-items-center ">
                                                     <p class="response-text">200
                                                         <span class="type-param">
-                                                            OBJRCT
+                                                            OBJECT
                                                         </span>
                                                     </p>
                                                 </div>
@@ -2384,7 +2406,7 @@ console.log(error);
                                             <div class="row text-end method-box p-2 py-3">
                                                 <button class="btn btn-dark btn-sm copy-button in-link" onclick="coyCodeToClipboard(this)">کپی</button>
                                                 <p class="webservice-link pb-sm-0 pb-5 post-method m-0">
-                                                    http://api.sms-webservice.com/api/V3/AccountInfo
+                                                    https://api.sms-webservice.com/api/V3/AccountInfo
                                                 </p>
                                             </div>
                                             <br>
@@ -2428,7 +2450,7 @@ console.log(error);
                           align-items-center ">
                                                     <p class="response-text">200
                                                         <span class="type-param">
-                                                            OBJRCT
+                                                            OBJECT
                                                         </span>
                                                     </p>
                                                 </div>
